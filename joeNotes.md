@@ -1,2 +1,2 @@
 run app: npm start
-optimize the build: npm run build
+deploy the build: npm run deploy
