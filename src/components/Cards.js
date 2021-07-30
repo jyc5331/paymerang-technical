@@ -1,5 +1,8 @@
 import React from "react";
 import M from "materialize-css"
+import data from "../utils/paymentData"
+
+console.log(data);
 
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.collapsible');
