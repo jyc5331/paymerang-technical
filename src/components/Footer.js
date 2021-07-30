@@ -1,10 +1,14 @@
-import React from "react";
+import React, { Component } from 'react';
 import { Footer } from "grommet";
 
-const FooterBar = () => {
-    <Footer>
-        Future Footer
-    </Footer>
-};
+class FooterBar extends Component {
+    render() {
+      return (
+        <Footer>
+          <div>It's me, I'm a footer</div>
+        </Footer>
+      );
+    }
+  }
 
 export default FooterBar;
