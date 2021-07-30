@@ -1,12 +1,17 @@
 import './App.css';
-import { Grommet } from 'grommet';
+import { Grommet, Main } from 'grommet';
 import Cards from "./components/Cards";
+// import Title from "./components/Title";
+// import FooterBar from "./components/Footer";
+// import SearchBar from "./components/SearchBar";
 
 
 function App() {
   return (
     <Grommet className="App">
-      <Cards />
+        <Main>
+        <Cards />
+        </Main>
     </Grommet>
   );
 }
