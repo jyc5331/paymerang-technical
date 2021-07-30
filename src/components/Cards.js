@@ -1,6 +1,7 @@
 import React from "react";
 import M from "materialize-css"
 import data from "../utils/paymentData"
+import {Main} from "grommet";
 
 console.log(data[0].Payee.Name); //don't forget to cap!
 
@@ -22,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const Cards = () => {
     return (
-
+      <Main>
       <ul className="collapsible">
       <li>
         <div className="collapsible-header"><i className="material-icons">filter_drama</i>{data[0].Payee.Name}</div>
@@ -37,6 +38,7 @@ const Cards = () => {
         <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
       </li>
     </ul>  
+    </Main>
     );
   };
 

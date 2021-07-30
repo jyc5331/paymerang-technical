@@ -1,12 +1,13 @@
 import './App.css';
+import { Grommet } from 'grommet';
 import Cards from "./components/Cards";
 
 
 function App() {
   return (
-    <div className="App">
+    <Grommet className="App">
       <Cards />
-    </div>
+    </Grommet>
   );
 }
 
