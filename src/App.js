@@ -4,7 +4,7 @@ import Cards from "./components/Cards";
 import Title from "./components/Title";
 import FooterBar from "./components/Footer";
 import SearchBar from "./components/SearchBar";
-
+import LogIn from "./components/LogIn";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Cards />
         </Main>
         <FooterBar />
+        <LogIn />
     </Grommet>
   );
 }
