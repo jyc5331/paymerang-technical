@@ -1,12 +1,26 @@
 import React, { Component } from 'react';
-import { Footer } from "grommet";
+import { Footer, grommet, Grommet, Text, Anchor } from 'grommet';
+import {Github} from 'grommet-icons'
 
 class FooterBar extends Component {
     render() {
+        const mystyle = {
+            position: "fixed"
+            //left and bottom don't work in React, figure this out to make a floating footer
+        };
       return (
-        <Footer>
-          <div>It's me, I'm a footer</div>
+        <Grommet theme={grommet}>
+        <Footer background="light-4" justify="center" pad="small" style={mystyle}>
+          <Text textAlign="center" size="small">
+            © Developed by Joseph Cosgrove for Paymerang
+            <Anchor
+            a11yTitle="Share feedback on Github"
+            href="https://github.com/jyc5331"
+            icon={<Github color="brand" />}
+            />
+          </Text>
         </Footer>
+      </Grommet>
       );
     }
   }
