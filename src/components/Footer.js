@@ -5,8 +5,7 @@ import {Github} from 'grommet-icons'
 class FooterBar extends Component {
     render() {
         const mystyle = {
-            position: "fixed"
-            //left and bottom don't work in React, figure this out to make a floating footer
+            //left and bottom don't work in React, leaving this in case I want to make a floating footer
         };
       return (
         <Grommet theme={grommet}>
