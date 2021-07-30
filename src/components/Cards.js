@@ -4,6 +4,10 @@ import data from "../utils/paymentData"
 
 console.log(data[0].Payee.Name); //don't forget to cap!
 
+for (let i = 0; i < data.length; i++) {
+  console.log(data[i].Payee.Name)
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.collapsible');
   var instances = M.Collapsible.init(elems);
