@@ -3,11 +3,33 @@ import M from "materialize-css"
 import data from "../utils/paymentData"
 import {Main} from "grommet";
 
-console.log(data[0].Payee.Name);
+// const remittanceArray = [data.Remittance]
+// console.log(remittanceArray)
 
-for (let i = 0; i < data.length; i++) {
-  console.log(data[i].Payee.Name)
-}
+// (function () {
+//   var item = data; //create a local variable
+//   for (var i = 0; i < item.length; i++) {
+//       for (var j = 0; j < item[i].Remittance.length; j++) {
+//           // console.log(item[j].Remittance);
+//           const remittances = item[j].Remittance
+//           console.log(remittances)
+//       }
+//   }
+// }());
+
+// for (let i = 0; i < data.length; i++) {
+// const remittanceArray = data[i].Remittance
+// console.log(remittanceArray)
+// }
+
+// data.map((item) => (
+// console.log("mapping about")  
+// ))
+
+
+// console.log(data[0].Remittance[0].PayorName)
+// const remittanceData = data.Remittance
+// console.log(RemittanceData)
 
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.collapsible');
@@ -20,7 +42,7 @@ const Cards = () => {
         <div>
           <section>Click any of the following rows to expand</section>
           {data.map((item) => (
-            <ul className="collapsible">
+            <ul className="collapsible" key={item.Payee.Name}>
             <li>
               <div className="collapsible-header"><i className="material-icons">filter_drama</i>Payee: {item.Payee.Name}</div>
               <div className="collapsible-body">
@@ -49,7 +71,12 @@ const Cards = () => {
             <li>
               <div className="collapsible-header"><i className="material-icons">whatshot</i>Third</div>
               <div className="collapsible-body">
-                <span> Consider a for loop for remittance array or a second map
+                <span> 
+                  <div>Insert loop here
+                  {/* {item.Remittance.map((remittance) => (
+                    console.log(remittance)
+                    ))} */}
+                  </div>
                 </span>
               </div>
             </li>
