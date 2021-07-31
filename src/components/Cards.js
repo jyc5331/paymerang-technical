@@ -1,7 +1,7 @@
 import React from "react";
 import M from "materialize-css"
 import data from "../utils/paymentData"
-import {Main, Card} from "grommet";
+import {Main, Card, Grid, Box} from "grommet";
 
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.collapsible');
@@ -16,7 +16,7 @@ const Cards = () => {
           {data.map((item) => (
             <ul className="collapsible" key={item.Payee.Name}>
             <li>
-              <div className="collapsible-header"><i className="material-icons">business_center</i>Payee: {item.Payee.Name}</div>
+              <div className="collapsible-header"><i className="material-icons">business_center</i>Payee:  {item.Payee.Name} </div>
               <div className="collapsible-body">
                 <span>
                 <div>Fax: {item.Payee.Fax} </div>
@@ -45,14 +45,23 @@ const Cards = () => {
               <div className="collapsible-body">
                 <span> 
                   <div>
-                  {item.Remittance.map((remittance) => (
-                    <Card key={remittance.PayorName}>{remittance.PayorName} <br/>
-                    {remittance.PayorId} <br/>
-                    {remittance.InvoiceNo} <br/>
-                    {remittance.Description} <br/>
-                    {remittance.Amount}
-                    </Card>
-                  ))}
+                  <Box>
+                    <Grid
+                      gap="small"
+                      rows="small"
+                      columns={{ count: "fit", size: ["small", "small"] }}
+                      
+                    >
+                      {item.Remittance.map((remittance) => (
+                        <Card height="small" width="small" key={remittance.PayorName}>{remittance.PayorName} <br/>
+                        {remittance.PayorId} <br/>
+                        {remittance.InvoiceNo} <br/>
+                        {remittance.Description} <br/>
+                        {remittance.Amount}
+                        </Card>
+                      ))}
+                      </Grid> 
+                    </Box>
                   </div>
                 </span>
               </div>
