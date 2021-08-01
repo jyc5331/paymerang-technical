@@ -3,18 +3,20 @@ import React, { useState } from 'react';
 import { Box, Select } from 'grommet';
 import data from '../utils/paymentData';
 
+const newOptions = data.map((item) => (item.Payee.Name))
+const options = newOptions;
 
 export const SearchBar = () => {
-  const newOptions = data.map((item) => (item.Payee.Name))
-
-  const options = newOptions;
   const [value, setValue] = useState('');
+  //code for filtering here
+  //set a new variable to the cards being mapped over in Cards.js
+  // https://www.emgoto.com/react-search-bar/
   return (
       <Box fill align="center" justify="start" pad="small" gap="small">
         <Select
           id="select"
           name="select"
-          placeholder="Select"
+          placeholder="Payees"
           value={value}
           options={options}
           onChange={({ option }) => setValue(option)}
@@ -23,4 +25,4 @@ export const SearchBar = () => {
   );
 };
 
-export default SearchBar
+export default SearchBar;
