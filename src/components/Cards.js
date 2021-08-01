@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState} from 'react';
 import M from "materialize-css";
 import data from "../utils/paymentData";
 import {Main, Card, Grid, Box} from "grommet";
@@ -12,6 +12,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const Cards = () => {
 
+  const [change, setChange] = useState(true);      
+function newFunc(){console.log("Yeehaw")}
+// const [default, newFunc] = useState(item.Payment.PAN)
+// function newFunc(){
+// const p = '1234567890123456';
+// //set p equal to className PAN
+// const regex = /\d{1,12}/;
+// console.log(p.replace(regex, 'xxxxxxxxxxxx'));
+// }
+// for (let i = 0; i < p.length; i++) {
+//     text += p[i].replace(regex, 'xxxxxxxxxxxx')
+//}
     return (
       <Main>
         <Box>
@@ -39,7 +51,9 @@ const Cards = () => {
                 <div className="collapsible-header"><i className="material-icons">credit_card</i>Payment Method: </div>
                 <div className="collapsible-body">
                   <span>
-                  <div className="PAN"> PAN: {item.Payment.PAN}</div> <br/>
+                  <button onClick = {() => setChange(!change)}> PAN: {item.Payment.PAN}</button> <br/>
+                    {change?<h1>{item.Payment.PAN}</h1>:
+                    newFunc()}
                   <div> CVV: {item.Payment.CVV}</div> <br/>
                   <div> Exp: {item.Payment.Exp}</div> <br/>
                   </span>
