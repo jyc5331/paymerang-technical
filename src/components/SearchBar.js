@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import { Box, Select } from 'grommet';
 import data from '../utils/paymentData';
 
-const newOptions = data.map((item) => (item.Payee.Name))
-console.log(newOptions)
 
 export const SearchBar = () => {
+  const newOptions = data.map((item) => (item.Payee.Name))
+
   const options = newOptions;
   const [value, setValue] = useState('');
   return (
