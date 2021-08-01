@@ -5,7 +5,6 @@ import {Main, Card, Grid, Box} from "grommet";
 import SearchBar from "./SearchBar"
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.collapsible');
   var instances = M.Collapsible.init(elems);
@@ -40,7 +39,7 @@ const Cards = () => {
                 <div className="collapsible-header"><i className="material-icons">credit_card</i>Payment Method: </div>
                 <div className="collapsible-body">
                   <span>
-                  <div> PAN: {item.Payment.PAN}</div> <br/>
+                  <div className="PAN"> PAN: {item.Payment.PAN}</div> <br/>
                   <div> CVV: {item.Payment.CVV}</div> <br/>
                   <div> Exp: {item.Payment.Exp}</div> <br/>
                   </span>
