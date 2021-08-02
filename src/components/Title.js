@@ -4,8 +4,8 @@ import { Header } from "grommet";
 class Title extends Component {
     render() {
       return (
-        <Header>
-          <div>It's me, I'm a header</div>
+        <Header background="light-4" pad="small">
+          <h3>Paymerang Technical</h3>
         </Header>
       );
     }

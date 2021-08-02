@@ -760,4 +760,30 @@ const data = [
     }
   ]
 
-  export default data;
+  // lines 766-769 are the winners
+// const regex = /\d{1,12}/;
+
+// // data.map((item) => newFunc(item.Payment.PAN))
+// const notData = data.map((item) => (item.Payment.PAN).toString().replace(regex, "xxxxxxxxxxxx"))
+
+// console.log(notData);
+
+// function newFunc(mappedItem) {
+// //   // console.log(mappedItem)
+//   let stringMappedItem = mappedItem.toString()
+//   // console.log(stringMappedItem)
+//   // for (let i = 0; i < stringMappedItem.length; i++) {
+//   let filteredAgain = stringMappedItem.replace(regex, 'xxxxxxxxxxxx')
+//   console.log(filteredAgain)
+// //   //extract the last 4 numbers of stringMappedItem and add them to filteredAgain
+// // }
+// // for (let j = 0; j < stringMappedItem.length; j++) {
+// //   let numberArray = Array.from(stringMappedItem)
+// //   console.log(numberArray)
+// // }
+// //   // mappedItem.replace(regex, "xxxxxxxxxxxx")
+// }
+
+// newFunc();
+
+export default data;
