@@ -1,28 +1,20 @@
 import {React, useState} from 'react';
 import M from "materialize-css";
 import data from "../utils/paymentData";
-import notData from "../utils/encryptedPAN"
 import {Main, Card, Grid, Box} from "grommet";
 import SearchBar from "./SearchBar"
 
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.collapsible');
-  var instances = M.Collapsible.init(elems, {accordion: false});
-});
-
-const outerArray = [
-  { id: '1st', innerArray: data},
-  { id: '2nd', innerArray: notData},
-]
-console.log(data);
-
 const Cards = () => {
-//https://stackoverflow.com/questions/44131209/using-a-map-within-a-map-in-jsx
 
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems, {accordion: false});
+  });
+
+  const regex = /\d{1,12}/;
 
   // const [change, setChange] = useState(true);      
   // function newFunc(){console.log("Yeehaw")} then add {onClick = {()}}
-  for (let i =0 ; i<notData.length ; i++)
 
     return (
       <Main>
@@ -30,7 +22,7 @@ const Cards = () => {
           <SearchBar />
           <div>
             <Box background="light-4" pad="small"><h5>Click any of the following rows to expand</h5></Box>
-            {data.map((item, index) => (
+            {data.map((item) => (
               <ul className="collapsible"  key={item.Payee.Name}>
               <li>
                 <div className="collapsible-header"><i className="material-icons">business_center</i>Payee:  {item.Payee.Name} </div>
@@ -50,17 +42,9 @@ const Cards = () => {
               <li>
                 <div className="collapsible-header"><i className="material-icons">credit_card</i>Payment Method: </div>
                 <div className="collapsible-body">                  
-            {/* {notData.map((encryptedData) => (<div key={encryptedData}>{encryptedData}</div>
-                         ))} */}
-              {/* {{for (let i =0 ; i<encryptedData.length ; i++) =>  */}
-              <div>{notData[i]}</div>
-            
-            {/* } } */}
-              {/* {notData.forEach(() => (console.log("hello")))} */}
-                  {/* <button onClick = {() => setChange(!change)}> PAN: {item.Payment.PAN}</button> <br/>
-                    {change?<h1>{item.Payment.PAN}</h1>:
-                    newFunc()} */}
-                    
+ 
+            <div>{item.Payment.PAN.toString().replace(regex, "xxxxxxxxxxxx")}</div>
+
                   <div> CVV: {item.Payment.CVV}</div> <br/>
                   <div> Exp: {item.Payment.Exp}</div> <br/>
                 </div>

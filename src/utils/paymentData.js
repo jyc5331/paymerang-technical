@@ -759,11 +759,5 @@ const data = [
       ]
     }
   ]
-  const regex = /\d{1,12}/;
 
-  // const newData = data.map( number => '$' + number);
-  // console.log(newData);
-
-// data.map((item) => (item.Payment.PAN).toString().replace(regex, "xxxxxxxxxxxx")).unshift()
-//simplest solution is to map over with the above methods and return to original data array
-export default data;
+  export default data;
