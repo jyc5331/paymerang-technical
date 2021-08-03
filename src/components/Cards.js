@@ -61,11 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         columns={{ count: "fit", size: ["small", "small"] }}
                       >
                         {item.Remittance.map((remittance) => (
-                          <Card height="small" width="small" key={remittance.PayorName}>{remittance.PayorName} <br/>
-                          {remittance.PayorId} <br/>
-                          {remittance.InvoiceNo} <br/>
-                          {remittance.Description} <br/>
-                          {remittance.Amount}
+                          <Card height="small" width="small" key={remittance.PayorName}>Payor name:{remittance.PayorName} <br/>
+                          Payor ID: {remittance.PayorId} <br/>
+                          Invoice Number: {remittance.InvoiceNo} <br/>
+                          Amount: {remittance.Amount} <br/>
+                          Description: {remittance.Description} <br/>
                           </Card>
                         ))}
                         </Grid> 
