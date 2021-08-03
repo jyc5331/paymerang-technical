@@ -13,16 +13,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const regex = /\d{1,12}/;
 
-  // const [change, setChange] = useState(true);      
-  // function newFunc(){console.log("Yeehaw")} then add {onClick = {()}}
-
+  const [value, setValue] = useState('');
+  console.log(value);
     return (
       <Main>
         <Box>
-          <SearchBar />
+          <SearchBar value={value} setValue={setValue}/>
           <div>
             <Box background="light-4" pad="small"><h5>Click any of the following rows to expand</h5></Box>
-            {data.map((item) => (
+            {data.map((item) => {
+              if(value === '' || (value !== '' && value===item.Payee.Name)) return (
               <ul className="collapsible"  key={item.Payee.Name}>
               <li>
                 <div className="collapsible-header"><i className="material-icons">business_center</i>Payee:  {item.Payee.Name} </div>
@@ -75,7 +75,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
               </li>
             </ul>  
-            ))}
+            )}
+            )}
           </div>
         </Box>
     </Main>

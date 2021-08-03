@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Box, Select } from 'grommet';
 import data from '../utils/paymentData';
@@ -6,8 +6,8 @@ import data from '../utils/paymentData';
 const newOptions = data.map((item) => (item.Payee.Name))
 const options = newOptions;
 
-export const SearchBar = () => {
-  const [value, setValue] = useState('');
+export const SearchBar = ({value, setValue}) => {
+  
   //code for filtering here
   //set a new variable to the cards being mapped over in Cards.js
   // https://www.emgoto.com/react-search-bar/
