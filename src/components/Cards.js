@@ -42,10 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
               <li>
                 <div className="collapsible-header"><i className="material-icons">credit_card</i>Payment Method: </div>
                 <div className="collapsible-body">                  
- 
-            <div>{item.Payment.PAN.toString().replace(regex, "xxxxxxxxxxxx")}</div>
-
-                  <div> CVV: {item.Payment.CVV}</div> <br/>
+                  <div> PAN: {item.Payment.PAN.toString().replace(regex, "xxxxxxxxxxxx")}</div>
+                  <div> CVV: {item.Payment.CVV}</div>
                   <div> Exp: {item.Payment.Exp}</div> <br/>
                 </div>
               </li>
