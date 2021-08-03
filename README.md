@@ -1,7 +1,9 @@
 # Paymerang Technical 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-An application designed for Paymerang to present payment data in a clear, concise manner. This application was developed using React in tandem with Materialize and Grommet and was deployed using Github.
+An application designed for Paymerang to present payment data in a clear, concise manner. This application was developed using React in tandem with Materialize and Grommet, tested with Lighthouse in Google Chrome, and was deployed using Github.
+
+
 
 ## Table of Contents
 
@@ -18,6 +20,10 @@ This web application is deployed to Github and there is no need for installation
 ## Usage
 
 The landing page features collapsible tables populated with data from the provided JSON. There is a search option that will filter your results. 
+
+![lighthouse results](./public/lighthouse.png)
+
+
 
 ![screencap of site](./public/screencap.png)
 
