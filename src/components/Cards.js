@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         columns={{ count: "fit", size: ["small", "small"] }}
                       >
                         {item.Remittance.map((remittance) => (
-                          <Card height="small" width="small" key={remittance.PayorName}>Payor name:{remittance.PayorName} <br/>
+                          <Card overflow="auto" height="small" width="small" key={remittance.PayorName}>Payor name:{remittance.PayorName} <br/>
                           Payor ID: {remittance.PayorId} <br/>
                           Invoice Number: {remittance.InvoiceNo} <br/>
                           Amount: {remittance.Amount} <br/>
