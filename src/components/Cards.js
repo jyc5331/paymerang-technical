@@ -1,4 +1,4 @@
-import {React, useState} from 'react';
+import {React, useState, useEffect} from 'react';
 import M from "materialize-css";
 import data from "../utils/paymentData";
 import {Main, Card, Grid, Box} from "grommet";
@@ -6,15 +6,17 @@ import SearchBar from "./SearchBar"
 
 const Cards = () => {
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems, {accordion: false});
-  });
+function sampleFunction() {
+  var elems = document.querySelectorAll('.collapsible');
+  var instances = M.Collapsible.init(elems, {accordion: false});
+}
+
+document.addEventListener('DOMContentLoaded', sampleFunction);
 
   const regex = /\d{1,12}/;
 
   const [value, setValue] = useState('');
-  console.log(value);
+  useEffect(sampleFunction, [value]);
     return (
       <Main>
         <Box>
